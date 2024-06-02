@@ -10,6 +10,5 @@ Route::get('/', function () {
 Route::get('/', [ApiController::class,'index']);
 Route::get('/detail/{id}', [ApiController::class, 'show']);
 
-//We can add here a route to redirect in case we have an error
-
+//this route is in case have a different name be redirect to /
 Route::any('{any}', [ApiController::class, 'redirect'])->where('any', '.*');

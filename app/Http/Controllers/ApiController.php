@@ -9,7 +9,7 @@ class ApiController extends Controller
 {
     public function index(UserServices $userServices)
     {
-        $data = 'data';
+        $data = $userServices->showAll();
 
         return view('index',compact('data'));
     }
