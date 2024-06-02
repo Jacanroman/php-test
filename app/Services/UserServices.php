@@ -81,8 +81,6 @@ class UserServices
         $final_array['data'] = $data;
         $final_array['error'] = (is_null($response)) ? "No data found for that Pokemon" : null;
 
-        dd($final_array);
-
         //I won't add more data due I don't have enough time
 
         return $final_array;
