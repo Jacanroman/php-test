@@ -43,4 +43,24 @@ class UserServices
         return $final_array;
     }
 
+    public function show(int $id)
+    {
+
+        try{
+            $response = Http::get("https://pokeapi.co/api/v2/pokemon/{$id}")->json();
+
+        }catch (Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+
+        dd($id);
+
+        return $final_array;
+
+    }
+
+
+
+
+
 }

@@ -14,9 +14,9 @@ class ApiController extends Controller
         return view('index',compact('data'));
     }
 
-    public function show(UserServices $userServices)
+    public function show(int $id,UserServices $userServices)
     {
-        $data ='data specific pokemon';
+        $data =$userServices->show($id);
         return view('pokemon',compact('data'));
     }
 
