@@ -10,14 +10,13 @@ class ApiController extends Controller
     public function index(UserServices $userServices)
     {
         $data = 'data';
-        dd($data);
+
         return view('index',compact('data'));
     }
 
     public function show(UserServices $userServices)
     {
         $data ='data specific pokemon';
-        dd($data);
         return view('pokemon',compact('data'));
     }
 
